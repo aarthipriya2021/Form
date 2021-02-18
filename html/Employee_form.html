@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Students form | Table</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="data.js"></script> -->
+    <script>
+        function onSubmit(){
+             let fname = document.getElementById('f_name').value;
+             let lname = document.getElementById('l_name').value;
+             let gender = document.getElementById('gender').value;
+             let dob = document.getElementById('dob').value;
+             let mobileno = document.getElementById('mob_no').value;
+             let mail = document.getElementById('mail_id').value;
+             let company = document.getElementById('company').value;
+             let address = document.getElementById('addr').value;
+             
+
+
+             let alertTxt = '';
+             let f_txt = fname;
+             let l_txt = lname;
+             let gen = gender;
+             let dOB = dob;
+             let mobile_no = mobileno;
+             let email = mail;
+             let comp = company;
+             let addres = address;
+
+             
+
+
+             if( fname == undefined || fname.trim().length == 0 || fname == 'null'){
+                 alertTxt += 'please enter first name\n';
+             }
+
+             if(alertTxt.length > 0) {
+                alert(alertTxt);
+            }
+
+            if( lname == undefined || lname.trim.length == 0 || lname == 'null'){
+                alertLname += 'Please enter last name.'
+             
+            if (alertLname.length > 0){
+                alert(alertLname);
+            } 
+            }
+
+            alert( 'Firstname :' + f_txt + 
+            '\nLastname :' + l_txt + 
+            '\nGender :' + gen + 
+            '\nDate of Birth :' + dOB + 
+            '\nMobile No.:' + mobile_no + 
+            '\nE-mail id :' + email + 
+            '\nCompany :' + comp + 
+            '\nAddress :' + addres )
+            
+        }
+        
+
+
+    </script>
+</head>
+<body>
+    <h1>Student's Details</h1>
+<form name="details">    
+    <table class="center">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Firstname: </label>
+                    </div>    
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="fname" id="f_name" required="required">
+                    </div>
+                </td>    
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Lastname: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="lname" id="l_name" required="required">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <div class="container">
+                        <label>Gender: </label>
+                   </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <select name="gender" id="gender" required="required">
+                            <option value="-"> - </option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Date of Birth: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container" >
+                        <input type="date" name="dob" id="dob" required="required">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Mobile No.: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="number" name="mobno" id="mob_no" required="required">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>E-mail id: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="email" name="mailid" id="mail_id" required="required">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Company: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="company" id="company" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Address: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container" >
+                        <textarea id="addr" required="required"></textarea>
+                    </div>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <input type="submit" class="button" onclick="onSubmit()" value="Submit">
+                        
+                    </div>
+                </td>
+            </tr>    
+
+        </tbody>
+        <script>
+            
+        </script>   
+
+        
+    </table>
+</form>    
+</body>
+</html>

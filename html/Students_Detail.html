@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Students form | Table</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="data.js"></script> -->
+    <script>
+        function onSubmit(e){
+
+            e.preventDefault();
+
+            document.getElementsByClassName('show').className = 'hide'
+
+
+             let fname = document.getElementById('f_name').value;
+             let lname = document.getElementById('l_name').value;
+             let gender = document.getElementById('gender').value;
+             let dob = document.getElementById('dob').value;
+             let mobileno = document.getElementById('mob_no').value;
+             let mail = document.getElementById('mail_id').value;
+             let company = document.getElementById('company').value;
+             let address = document.getElementById('addr').value;
+             
+
+
+             let alertTxt = '';
+             let f_txt = fname;
+             let l_txt = lname;
+             let gen = gender;
+             let dOB = dob;
+             let mobile_no = mobileno;
+             let email = mail;
+             let comp = company;
+             let addres = address;
+
+             
+
+
+             if( fname == undefined || fname.trim().length == 0 || fname == 'null'){
+                 alertTxt += 'please enter first name\n';
+                 
+                 let f_name_cls = document.getElementById('f_name').className;
+                 document.getElementById('f_name').className = f_name_cls+' error'
+                 document.getElementById('f_name_sp').className = 'show'
+
+                 let l_name_cls = document.getElementById('l_name').className;
+                 document.getElementById('l_name').className = l_name_cls + ' error'
+                 document.getElementById('l_name_sp').className = 'show'
+
+                 let gen_name_cls = document.getElementById('gender').className;
+                 document.getElementById('gender').className = gen_name_cls +' error';
+                 document.getElementById("gen_name_sp").className = 'show';
+
+                 let dob_cls = document.getElementById('dob').className;
+                 document.getElementById('dob').className = dob_cls +' error'
+                 document.getElementById('dob_sp').className = 'show'
+
+                 let mob_no_cls = document.getElementById('mob_no').className;
+                 document.getElementById('mob_no').className = mob_no_cls +' error'
+                 document.getElementById('mob_no_sp').className = 'show'
+
+                 let mail_id_cls = document.getElementById('mail_id').className;
+                 document.getElementById('mail_id').className = mail_id_cls+' error'
+                 document.getElementById('mail_id_sp').className = 'show'
+
+                 let company_cls = document.getElementById('company').className;
+                 document.getElementById('company').className = company_cls+' error'
+                 document.getElementById('company_sp').className = 'show'
+
+                 let address_cls = document.getElementById('addr').className;
+                 document.getElementById('addr').className = address_cls+' error'
+                 document.getElementById('address_sp').className = 'show'
+
+
+             }
+
+             
+
+             if( lname == undefined || lname.trim().length == 0 || lname == 'null'){
+                alertTxt += 'please enter last name\n';
+             }
+
+             
+             if( gender == undefined || gender.trim().length == 0 || gender == 'null'){
+                alertTxt += 'please select anyone.\n';
+             }
+
+             
+             if( dob == undefined || dob.trim().length == 0 || dob == 'null'){
+                alertTxt += 'please enter your date of birth.\n';
+             }
+
+             
+             if( mobileno == undefined || mobileno.trim().length == 0 || mobileno == 'null'){
+                alertTxt += 'please enter your mobile number.\n';
+             }
+
+             
+             if( mail == undefined || mail.trim().length == 0 || mail == 'null'){
+                alertTxt += 'please enter your mail id.\n';
+             }
+
+             if( company == undefined || company.trim().length == 0 || company == 'null'){
+                alertTxt += 'please enter your company name.\n';
+             }
+
+             if( address == undefined || address.trim().length == 0 || address == 'null'){
+                alertTxt += 'please enter your address.\n';
+             }
+
+             if(alertTxt.length > 0) {
+                alert(alertTxt);
+             }
+
+
+
+            alert( 'Firstname :' + f_txt + 
+            '\nLastname :' + l_txt + 
+            '\nGender :' + gen + 
+            '\nDate of Birth :' + dOB + 
+            '\nMobile No.:' + mobile_no + 
+            's\nE-mail id :' + email + 
+            '\nCompany :' + comp + 
+            '\nAddress :' + addres )
+
+            return;
+            
+        }
+
+        
+    </script>
+</head>
+<body>
+    <h1>Student's Details</h1>
+<form name="details">    
+    <table class="center" >
+        <tbody>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Firstname: </label>
+                    </div>    
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="fname" id="f_name">
+                        <br />
+                        <span style="
+                        color: red; 
+                    " class="hide" id="f_name_sp">*please enter first name</span>
+                    </div>
+                </td>    
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Lastname: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="lname" id="l_name" >
+                        <br />
+                        <span style="
+                        color: red;"
+                        class="hide" id="l_name_sp">*please enter last name.</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <div class="container">
+                        <label>Gender: </label>
+                   </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <select name="gender" id="gender"></select>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            <br />
+                            <span style="
+                            color: red;"
+                            class="hide" id="gen_name_sp">*please select your gender.</span>    
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Date of Birth: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container" >
+                        <input type="date" name="dob" id="dob" >
+                        <br />
+                        <span style="
+                        color: red;"
+                        class="hide" id="dob_sp">*please select your dob.</span>    
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Mobile No.: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="number" name="mobno" id="mob_no" >
+                        <br />
+                        <span style="
+                        color: red;" 
+                        class="hide" id="mob_no_sp">*please enter your mobileno.</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>E-mail id: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="email" name="mailid" id="mail_id" >
+                        <br />
+                        <span style="
+                        color: red;"
+                        class="hide" id="mail_id_sp">*please enter your mail id.</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Company: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="company" id="company" >
+                        <br />
+                        <span style="
+                        color: red;"
+                        class="hide" id="company_sp">*please enter your company.</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Address: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container" >
+                        <textarea id="addr" ></textarea>
+                        <br />
+                        <span style="
+                        color: red;"
+                        class="hide" id="address_sp">*please enter address.</span>
+                    </div>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <input type="submit" class="button" onclick="onSubmit(event)" value="Submit">
+                        
+                    </div>
+                </td>
+            </tr>    
+
+        </tbody>
+        <script>
+            
+        </script>   
+
+        
+    </table>
+</form>    
+</body>
+</html>

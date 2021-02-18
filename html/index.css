@@ -1,0 +1,57 @@
+h1{
+    
+    color : blue;
+    text-align: center;
+    font-style: italic;
+    padding: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: lightgray;
+    align-content: left;
+    border: 0.3rem solid black;
+    border-radius: 1rem;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+
+}
+td{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.4cm;
+    color: rgb(18, 44, 44);
+    padding: 0.5rem;
+    text-align: center; 
+
+    
+}
+
+.button{
+    
+    margin: 60%;
+    border-width: 8px;
+    background-color: dimgray;
+    color: rgb(22, 21, 21);
+    width: 180%;
+} 
+
+#gender{
+    padding-right: 106px;
+}
+
+#dob{
+    padding-right: 31px;
+}
+
+#addr{
+    padding-right: 19px;
+}
+.error{
+    border: 2px solid red;
+}
+.show{
+    visibility:visible
+}
+.hide{
+    visibility:hidden
+}

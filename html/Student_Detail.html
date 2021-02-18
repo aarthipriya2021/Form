@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Students form | Table</title>
+    <link rel="stylesheet" href="index.css">
+    <script type='text/javascript' src="/html/data.js"></script>
+    <script>
+        function onSubmit(){
+             let fname = document.getElementById('f_name').value
+
+             let alertTxt = '';
+
+             if( fname == undefined || fname.trim().length == 0 || fname == 'null'){
+                 alertTxt += 'please enter first name\n';
+             }
+
+             if(alertTxt.length > 0) {
+                alert(alertTxt)
+            }
+
+            let fname = document.getElementById('l_name').value
+            let alertTxt = '';
+            if (lname == undefined) ||
+        }
+        
+
+
+    </script>
+</head>
+<body>
+    <h1>Student's Details</h1>
+<form name="details">    
+    <table class="center">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Firstname: </label>
+                    </div>    
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="fname" id="f_name">
+                    </div>
+                </td>    
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Lastname: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="lname">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <div class="container">
+                        <label>Gender: </label>
+                   </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <select name="gender" class="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Date of Birth: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container" >
+                        <input type="date" name="dob" class="dob">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Mobile No.: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="number" name="mobno">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>E-mail id: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="email" name="mailid">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Company: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <input type="text" name="company">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <label>Address: </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="container" >
+                        <textarea class="addr"></textarea>
+                    </div>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <input type="submit" class="button" onclick="onSubmit()" value="Submit">
+                        
+                    </div>
+                </td>
+            </tr>    
+
+        </tbody>
+        <script>
+            
+        </script>   
+
+        
+    </table>
+</form>    
+</body>
+</html>
